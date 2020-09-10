@@ -5,6 +5,10 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 import router from './router.js'
 
+import VueResource from 'vue-resource'
+// 1.2 安装路由
+Vue.use(VueResource)
+
 
 
 import mintUI from 'mint-ui'
