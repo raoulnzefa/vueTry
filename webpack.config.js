@@ -19,7 +19,7 @@ module.exports={
         rules:[
             { test:/\.css$/, use:["style-loader",'css-loader']},
             { test:/\.js$/, use:"babel-loader", exclude:/node_modules/},
-            { test:/\.(jpg|png|gif|bmp|jpeg|svg|ttf)$/, use:"url-loader"},
+            { test:/\.(jpg|png|gif|bmp|jpeg)$/, use:"url-loader"},
             { test:/\.vue$/, use:"vue-loader"},
             { test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader'] }, // 处理 less 文件的 loader
             { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] }, // 处理 scss 文件的 loader
