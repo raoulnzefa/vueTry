@@ -8,24 +8,24 @@
         </mt-swipe>
           <h1>这是首页</h1>
            <ul class="mui-table-view mui-grid-view mui-grid-9">
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/newsList">
 		                    <span class="mui-icon mui-icon-home"></span>
-		                    <div class="mui-media-body">Home</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <div class="mui-media-body">新闻</div></router-link></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/">
 		                    <span class="mui-icon mui-icon-email"><span class="mui-badge">5</span></span>
-		                    <div class="mui-media-body">Email</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <div class="mui-media-body">Email</div></router-link></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/">
 		                    <span class="mui-icon mui-icon-chatbubble"></span>
-		                    <div class="mui-media-body">Chat</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <div class="mui-media-body">Chat</div></router-link></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/">
 		                    <span class="mui-icon mui-icon-location"></span>
-		                    <div class="mui-media-body">location</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <div class="mui-media-body">location</div></router-link></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/">
 		                    <span class="mui-icon mui-icon-search"></span>
-		                    <div class="mui-media-body">Search</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <div class="mui-media-body">Search</div></router-link></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/">
 		                    <span class="mui-icon mui-icon-phone"></span>
-		                    <div class="mui-media-body">Phone</div></a></li>
+		                    <div class="mui-media-body">Phone</div></router-link></li>
 		           
 		        </ul> 
     </div>
@@ -43,7 +43,7 @@ export default {
     },
     methods:{
         getLunbo(){
-            this.$http.get('http://www.liulongbin.top:3005/api/getlunbo').then(result=>{
+            this.$http.get('api/getlunbo').then(result=>{
                 console.log(result.body)
                 if(result.body.status==0){
                     this.lunboList=result.body.message
